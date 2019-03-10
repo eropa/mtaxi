@@ -158,6 +158,17 @@
                                     >
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Телефон</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           name="phonedrive"
+                                           value="{{ $data->phonedrive }}"
+                                    >
+                                </div>
+
+                            </div>
 
                             @method('PUT')
                             @csrf

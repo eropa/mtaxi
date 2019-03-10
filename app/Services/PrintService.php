@@ -25,8 +25,7 @@ class PrintService{
 
         $months = array( 1 => 'Январь' , 'Февраль' , 'Март' , 'Апрель' , 'Май' , 'Июнь' , 'Июль' , 'Август' , 'Сентябрь' , 'Октябрь' , 'Ноябрь' , 'Декабрь' );
 
-        // dump($datastart);
-       // dump();
+
         $datetime1 = new DateTime($datastart);
 
         $datetime2 = new DateTime($datastop);
@@ -56,7 +55,6 @@ class PrintService{
         $sFIOmed=Cotrudnik::find(4);
         $sFIOmed=$sFIOmed->fio;
         $datafirm=Firma::find($data->firmaid);
-       // dump($datafirm->name);
         $namefirma=$datafirm->name.' ОГРН '.$datafirm->nomerorganiz;
         $addressfirm=$datafirm->address;
 
@@ -137,7 +135,7 @@ class PrintService{
             $pdf->SetXY(79,83);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex)); //тут берем с базы
 
-            $pdf->SetFontSize(4); // размер текста
+            $pdf->SetFontSize(5); // размер текста
             $pdf->SetXY(117,83);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal)); //тут берем с базы
             $pdf->SetFontSize(6); // размер текста

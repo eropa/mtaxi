@@ -160,6 +160,17 @@
                                 </div>
                             </div>
 
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Телефон</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           name="phonedrive"
+                                    >
+                                </div>
+
+                            </div>
+
 
                             @csrf
                             <button type="submit" class="btn btn-primary"

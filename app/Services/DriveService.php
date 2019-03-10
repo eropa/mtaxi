@@ -26,6 +26,7 @@ class DriveService{
         $model->ydost1=$array['ydost1'];
         $model->ydost2=$array['ydost2'];
         $model->fiosmal=$array['fiosmal'];
+        $model->phonedrive=$array['phonedrive'];
         // Сохроняем значение
         $model->save();
     }
@@ -45,6 +46,7 @@ class DriveService{
         $driver->ydost1=$array['ydost1'];
         $driver->ydost2=$array['ydost2'];
         $driver->fiosmal=$array['fiosmal'];
+        $driver->phonedrive=$array['phonedrive'];
         // обновить
         $driver->save();
     }
