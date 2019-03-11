@@ -252,7 +252,8 @@
                     alert(myObj);
                     myObj.forEach(function(element) {
                         var option = document.createElement("option");
-                        option.text = element;
+                        option.value=element[0];
+                        option.text = element[1];
                         selectElement.add(option);
                     });
                     //document.getElementById("demo").innerHTML = myObj.name;

@@ -110,7 +110,7 @@ class FirmaController extends Controller
         $photos = array();
         $datas=Firma::all();
         foreach ($datas as $data){
-            array_push($photos,$data->name);
+            array_push($photos,array($data->id,$data->name));
         }
         // возрошаем json
         $myJSON = json_encode($photos);
