@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Водитель ( добавить запись)</div>
+                    <div class="card-header">Водитель ( редактировать запись)</div>
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Фирма</label>
-                                    <select class="form-control" name="firmaid">
+                                    <select class="js-example-basic-single" name="firmaid">
                                         <option value="0">Выбирите фирму</option>
                                         @foreach($datafirms as $datafirm)
                                             <option value="{{ $datafirm->id }}"
@@ -183,6 +183,11 @@
 
 @section('myjs')
     <script>
+
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
 
         /**
          * Функция выбора авто из шаблона

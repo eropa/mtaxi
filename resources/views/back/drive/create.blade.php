@@ -101,7 +101,7 @@
                                     <label>Фирма</label>
                                     <button type="button" class="btn btn-primary" onclick="ajaxFirma()">Обновить список</button>
                                     <a href="{{ @url('upanel/firma/create') }}" target="_blank">Добавить фирму</a>
-                                    <select class="form-control" name="firmaid" id="firmaid" >
+                                    <select  class="js-example-basic-single" name="firmaid" id="firmaid" >
                                         <option value="0">Выберите фирму</option>
                                         @foreach($datafirms as $datafirm)
                                             <option value="{{ $datafirm->id }}">{{ $datafirm->name }}</option>
@@ -186,6 +186,11 @@
 
 @section('myjs')
     <script>
+
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
 
         /**
          * Функция выбора авто из шаблона
